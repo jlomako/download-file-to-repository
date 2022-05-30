@@ -4,8 +4,8 @@ name: getfile
 
 # set timer when script will run (16utc = 12am local time)
 on:
-  push:
-    branches: main
+  schedule:
+  - cron: 0 16 * * *
 
 jobs: 
   getfile:
