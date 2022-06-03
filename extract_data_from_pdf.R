@@ -8,7 +8,7 @@ library(pdftools)
 # can't download pdf through github actions: server error 500
 # url <- "https://santemontreal.qc.ca/fileadmin/fichiers_portail/Donnees_urgence/urgence_quotidien_media.pdf"
 
-# little workaround: use local copy 
+# use local copy for now:
 url <- "pdf/urgence_quotidien_media.pdf"
 
 # read pdf
