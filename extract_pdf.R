@@ -6,7 +6,7 @@ library(tidyverse)
 library(pdftools)
 
 # get file directly
-url <- "https://santemontreal.qc.ca/fileadmin/fichiers_portail/Donnees_urgence/urgence_quotidien_media.pdf"
+url <- "https://www.msss.gouv.qc.ca/professionnels/statistiques/documents/urgences/Rap_Quotid_SituatUrgence1.pdf"
 
 # use local copy for now:
 # url <- "pdf/Rap_Quotid_SituatUrgence1.pdf"
