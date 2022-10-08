@@ -1,4 +1,4 @@
-name: pdf-downloader
+name: file-downloader
 
 on:
   push:
