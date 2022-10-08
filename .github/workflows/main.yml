@@ -1,37 +1,26 @@
-# loads R, downloads pdf from website and saves pdf to directory
+name: pdf-downloader
 
-name: getfile
-
-# set timer when script will run (16utc = 12am local time)
-# on:
-#   schedule:
-#   - cron: 0 16 * * *
-
-# on push
 on:
   push:
-    branches: main
+    branches: 
+      - main
 
 jobs: 
-  getfile:
-    # The type of runner that the job will run on
-    runs-on: macos-latest
+  download-pdf:
+    runs-on: ubuntu-latest
 
-    # load repo and install R
     steps:
     - uses: actions/checkout@master
-    - uses: r-lib/actions/setup-r@master
 
-    # Run R script
-    - name: run R script
-      run: Rscript get_file.R
+    - name: run-wget
+      run: wget "https://www.msss.gouv.qc.ca/professionnels/statistiques/documents/urgences/Rap_Quotid_SituatUrgence1.pdf"
 
- # Add new file in data folder, commit along with other modified files, push
     - name: commit files
       run: |
         git config --local user.name actions-user
         git config --local user.email "actions@github.com"
-        git add pdf/*
+        git add *.pdf 
+        git mv "Rap_Quotid_SituatUrgence1.pdf" "pdf/urgence.pdf"
         git commit -am "Scheduled Github Action on $(date)"
         git push origin main
       env:
