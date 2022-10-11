@@ -6,7 +6,7 @@ on:
       - main
 
 jobs: 
-  download-pdf:
+  download-file:
     runs-on: ubuntu-latest
 
     steps:
