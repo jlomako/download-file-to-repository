@@ -1,4 +1,4 @@
-# get-pdf
+# download-file-to-repository
 github action that saves file to repository 
 (paused for now)
 
