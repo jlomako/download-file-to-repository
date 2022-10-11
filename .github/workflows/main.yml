@@ -1,9 +1,9 @@
 name: file-downloader
 
-# set timer: at minute 30
+# set timer: at minute 50
 #on:
 #  schedule:
-#  - cron: 30 * * * *
+#  - cron: 50 * * * *
 
 on:
   push:
@@ -26,7 +26,8 @@ jobs:
         git config --local user.name actions-user
         git config --local user.email "actions@github.com"
         git add *.csv
-        git mv -f *.csv "data/urgence.csv"
+        # git mv -f "Releve_horaire_urgences_7jours.csv" "data/urgence.csv"
+        git mv -f "Releve_horaire_urgences_7jours.csv" "data/urgence $(date=format:'%Y-%m-%d %H').csv"
         git commit -am "Scheduled Github Action on $(date)"
         git push origin main
       env:
