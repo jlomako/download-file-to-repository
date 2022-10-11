@@ -27,7 +27,7 @@ jobs:
         git config --local user.email "actions@github.com"
         git add *.csv
         # git mv -f "Releve_horaire_urgences_7jours.csv" "data/urgence.csv"
-        git mv -f "Releve_horaire_urgences_7jours.csv" "data/urgence $(date=format:'%Y-%m-%d %H').csv"
+        git mv -f "Releve_horaire_urgences_7jours.csv" "data/urgence_$(date +"%Y-%m-%d-%I").csv"
         git commit -am "Scheduled Github Action on $(date)"
         git push origin main
       env:
