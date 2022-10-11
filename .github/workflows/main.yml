@@ -1,6 +1,6 @@
 name: file-downloader
 
-# set timer: at minute 50
+# set timer: at minute 45
 on:
   schedule:
   - cron: 45 * * * *
