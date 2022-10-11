@@ -1,5 +1,5 @@
 # get-pdf
-github action that saves pdf or any other file to repository 
+github action that saves file to repository 
 (paused for now)
 
 
