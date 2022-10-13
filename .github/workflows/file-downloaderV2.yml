@@ -1,14 +1,14 @@
 name: file-downloader v2
 
 # set timer: at minute 45
-#on:
-#  schedule:
-#  - cron: 45 * * * *
-
 on:
-  push:
-    branches: 
-      - main
+  schedule:
+  - cron: 45 * * * *
+
+#on:
+#  push:
+#    branches: 
+#      - main
 
 jobs: 
   download-file:
