@@ -1,6 +1,5 @@
 # download-file-to-repository
 * github action that runs on ubuntu and saves file to repository
-* uses cron job to update every hour and get data for <a href = "https://github.com/jlomako/Montreal-ER">Montreal-ER</a> and <a href="https://github.com/jlomako/quebec-emergency-rooms">Quebec ER</a> trackers
-* usually runs late.. therefore currently only used for <a href="https://github.com/jlomako/quebec-emergency-rooms">Quebec emergency room</a> map
+* uses cron job to update once a day at 15:05 utc time
 
 [![file-downloader v2](https://github.com/jlomako/download-file-to-repository/actions/workflows/file-downloaderV2.yml/badge.svg)](https://github.com/jlomako/download-file-to-repository/actions/workflows/file-downloaderV2.yml)
