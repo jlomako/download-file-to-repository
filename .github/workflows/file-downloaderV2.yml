@@ -3,7 +3,7 @@ name: file-downloader v2
 # set timer: at minute 45
 on:
   schedule:
-  - cron: 45 * * * *
+  - cron: 5 15 * * *
 
 #on:
 #  push:
@@ -20,7 +20,6 @@ jobs:
 
       - name: run-wget
         run: wget "https://www.msss.gouv.qc.ca/professionnels/statistiques/documents/urgences/Releve_horaire_urgences_7jours.csv"
-      # run: wget "https://www.msss.gouv.qc.ca/professionnels/statistiques/documents/urgences/Rap_Quotid_SituatUrgence1.pdf"
 
       - name: commit files
         run: |
